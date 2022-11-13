@@ -13,7 +13,7 @@ on:
 
   schedule:
     - cron: '30 09 * * *'
-    # run every day at 17:10 in UTC+8
+    # run every day at 17:30 in UTC+8
 
 jobs:
   chekIn:
