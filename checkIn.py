@@ -127,6 +127,12 @@ def check_in(uid, SERVERPUSHKEY):
         driver.get(url)
         time.sleep(60 * 15)
         check_in(uid, SERVERPUSHKEY)
+    if text == "打卡成功:" and SERVERPUSHKEY:
+        driver = webdriver.Chrome(options=chrome_options)  # 获取浏览器句柄
+        url = "https://sc.ftqq.com/" + SERVERPUSHKEY + ".send?text=" + text
+        driver.get(url)
+        time.sleep(60 * 15)
+        check_in(uid, SERVERPUSHKEY)
 
 
 UID = os.environ["UID"]
