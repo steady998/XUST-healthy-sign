@@ -41,7 +41,7 @@ def prepare_browser(uid):
         url_login = "http://ehallplatform.xust.edu.cn/default/jkdk/mobile/mobJkdkAdd_test.jsp?uid=" + uid
         driver.get(url_login)
 
-        time.sleep(3)
+        time.sleep(5)
 
         driver.execute_script('$("#ssq").show();')
         driver.execute_script('$("#xxd").show();')
@@ -55,7 +55,7 @@ def prepare_browser(uid):
         driver.execute_script('''$("#jingdu").val('108.967363');''')
         driver.execute_script('''$("#weidu").val('34.231581');''')
 
-        time.sleep(1)
+        time.sleep(3)
         input = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'input.srk.jiaodian')))
 
         target = driver.find_elements(By.CSS_SELECTOR, 'input.srk.jiaodian')[1]
