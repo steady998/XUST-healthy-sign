@@ -5,9 +5,9 @@
 
 </div>
 
-#本项目为自用修改版，了解更多请看原仓库
+# 本项目为自用修改版，了解更多请看原仓库
 
-#注意事项及修改内容
+# 注意事项及修改内容
 
 1.此fork仅小范围使用，并不用做商业用途
 
@@ -34,16 +34,16 @@
 
 | Name | Value |
 | --- | --- |
-| UID | <mark>UID</mark> |
+| UID | ``UID`` |
 
 | Name | Value |
 | --- | --- |
-| SERVERPUSHKEY | <mark>Key</mark> |
+| SERVERPUSHKEY | ``Key`` |
 
-<mark>UID</mark>的获取： 自主进入健康打卡页面（如遇到需要先填写返校承诺书的情况先完成返校承诺书再继续进入健康打卡页面)，然后右上角
+``UID``的获取： 自主进入健康打卡页面（如遇到需要先填写返校承诺书的情况先完成返校承诺书再继续进入健康打卡页面)，然后右上角
 copy url， 将url尾部的uid=‘这就是我们要的uid’复制下来 （uid末尾的‘=’符号是uid的一部分）
 
-<mark>Key</mark>的获取：下载pushdeer官方app或其他渠道，详情参见[Pushdeer](https://github.com/easychen/pushdeer)
+``Key``的获取：下载pushdeer官方app或其他渠道，详情参见[Pushdeer](https://github.com/easychen/pushdeer)
 
 4. **开启 Actions 并触发每日自动执行**
 
@@ -53,7 +53,7 @@ copy url， 将url尾部的uid=‘这就是我们要的uid’复制下来 （uid
   schedule:
     - cron: '30 9 * * *'
     # cron表达式，Actions时区是UTC时间，所以下午18点要往前推8个小时。
-    # 示例： 每天晚上22点30执行 '30 14 * * *'
+    # 示例： 每天下午17点30执行 '30 9 * * *'
     # 本仓库默认中国时间(utc+8)的17：30分打卡
 ```
 
