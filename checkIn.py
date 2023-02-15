@@ -121,12 +121,12 @@ def check_in(uid, SERVERPUSHKEY):
 
     if text == "打卡成功:" and SERVERPUSHKEY:
         driver = webdriver.Chrome(options=chrome_options)  # 获取浏览器句柄
-        url = "https://api2.pushdeer.com/message/push?pushkey=" + SERVERPUSHKEY + "&text=✅今日健康打卡已完成✅"
+        url = "https://xizhi.qqoq.net/XZc4238cf175f248f25658a56c6b160e12.send?title=✅打卡成功&content=✅今日健康打卡已完成✅"
         driver.get(url)
 
     if text == "打卡失败:" and SERVERPUSHKEY:
         driver = webdriver.Chrome(options=chrome_options)  # 获取浏览器句柄
-        url = "https://api2.pushdeer.com/message/push?pushkey=" + SERVERPUSHKEY + "&text=❌打卡失败❌可能为学校打卡页面崩溃，将在15分钟后再次尝试并提醒，直至成功。如需要请前往Github手动Cancle掉本次Action并手动打卡"
+        url = "https://xizhi.qqoq.net/XZc4238cf175f248f25658a56c6b160e12.send?title=❌打卡失败&content=❌打卡失败❌可能为学校打卡页面崩溃，将在15分钟后再次尝试并提醒，直至成功。如需要请前往Github手动Cancle掉本次Action并手动打卡"
         driver.get(url)
         time.sleep(60 * 15)
         check_in(uid, SERVERPUSHKEY)
