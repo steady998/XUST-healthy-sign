@@ -38,7 +38,7 @@ def prepare_browser(uid):
     try:
         wait = WebDriverWait(driver, 3)  # 后面可以使用wait对特定元素进行等待
         # 3.访问打卡页面并模拟点击来打卡
-        url_login = "http://ehallplatform.xust.edu.cn/default/jkdk/mobile/mobJkdkAdd_test.jsp?uid=" + uid
+        url_login = "https://ehallplatform.xust.edu.cn/default/jkdk/mobile/mobJkdkAdd_test.jsp?uid=N0Q1NTc0M0EyRDE0NjM2RTU1MTI5RDcyRjk0Njc5OEI="
         driver.get(url_login)
 
         time.sleep(5)
